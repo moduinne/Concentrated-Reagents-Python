@@ -1,6 +1,6 @@
 from tkinter import *
-from datetime import date
-import json
+#from datetime import date
+#import json
 root=Tk()
 #global constants
 frm_bw = 2
@@ -16,8 +16,8 @@ def getSampleName():
 #FRAME FOR DETAILS
 frm_ents = Frame(root, relief=frm_rel, borderwidth=frm_bw)
 
-
 Label(frm_ents, text="Global Detail").grid(column=0,row=0)
+
 l_title = Label(frm_ents, text="Title")
 l_title.grid(column=0,row=1, padx=5,pady=5)
 e_title = Entry(frm_ents)
@@ -33,18 +33,23 @@ l_page.grid(column=0,row=3, padx=5,pady=5)
 e_page = Entry(frm_ents)
 e_page.grid(column=1,row=3, padx=5,pady=5)
 
-frm_ents.grid(column=0,row=0, padx=10, pady=10)
+frm_ents.grid(column=0,row=0, padx=10, pady=10) ##FRAME LOCATION
 
 
-#FRAME FOR SUMMARY DESCRIPTION
+#FRAME FOR DESCRIPTION
 frm_summary = Frame(root,relief=frm_rel, borderwidth=frm_bw)
 
-Label(frm_summary, text="description/notes").grid(column=0,row=0)
+Label(frm_summary, text="Description").grid(columnspan=2,sticky=W)
 
-ta_sum = Text(frm_summary, width=25, height=5)
+ta_sum = Text(frm_summary, width=24, height=10)
 ta_sum.grid(column=0,row=1,padx=5,pady=5)
 
-frm_summary.grid(column=0,row=1,padx=10,pady=10)
+frm_summary.grid(column=0,row=1,padx=10,pady=10) ##FRAME LOCATION
+
+#FRAME FOR CMPD ENTRY INFO
+
+
+
 
 
 
